@@ -7,7 +7,7 @@ import axios from 'axios';
 import { THEMES } from './shared/themeConfig'; 
 
 // !!! IMPORTANT: REPLACE THIS WITH YOUR COMPUTER'S LOCAL IP ADDRESS !!!
-const API_URL = "http://192.168.1.5:3000"; 
+const API_URL = process.env.RENDER_EXTERNAL_URL; 
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({ shouldShowAlert: true, shouldPlaySound: true, shouldSetBadge: false }),
